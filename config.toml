@@ -1,0 +1,15 @@
+baseURL = "https://stomoya.github.io/blog/"
+languageCode = "en-us"
+title = "STomoya"
+theme = "github-style"
+copyright = "2020. STomoya All Rights Reserved"
+canonifyurls = true
+publishDir = "docs"
+
+[params]
+    author = "STomoya"
+    description = "A student in Japan"
+    github = "STomoya"
+    email = "blackie0110@gmail.com"
+    avatar = "https://avatars1.githubusercontent.com/u/49909252?s=400&u=f86c4bceea08d6ffb846f4c170a0fba7ddc806c1&v=4"
+    url = "https://stomoya.github.io"

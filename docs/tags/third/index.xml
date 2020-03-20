@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>third on STomoya</title>
+    <link>https://stomoya.github.io/blog/tags/third/</link>
+    <description>Recent content in third on STomoya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020. STomoya All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 20 Mar 2020 21:19:29 +0900</lastBuildDate>
+    
+	<atom:link href="https://stomoya.github.io/blog/tags/third/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Second Post</title>
+      <link>https://stomoya.github.io/blog/posts/second-post/</link>
+      <pubDate>Fri, 20 Mar 2020 21:19:29 +0900</pubDate>
+      
+      <guid>https://stomoya.github.io/blog/posts/second-post/</guid>
+      <description>Second Sample Summary</description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>https://stomoya.github.io/blog/posts/first-post/</link>
+      <pubDate>Fri, 20 Mar 2020 21:17:53 +0900</pubDate>
+      
+      <guid>https://stomoya.github.io/blog/posts/first-post/</guid>
+      <description>Sample Summary</description>
+    </item>
+    
+  </channel>
+</rss>

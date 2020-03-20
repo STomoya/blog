@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on STomoya</title>
+    <link>https://stomoya.github.io/blog/tags/</link>
+    <description>Recent content in Tags on STomoya</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020. STomoya All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 20 Mar 2020 21:19:29 +0900</lastBuildDate>
+    
+	<atom:link href="https://stomoya.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>second</title>
+      <link>https://stomoya.github.io/blog/tags/second/</link>
+      <pubDate>Fri, 20 Mar 2020 21:19:29 +0900</pubDate>
+      
+      <guid>https://stomoya.github.io/blog/tags/second/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>third</title>
+      <link>https://stomoya.github.io/blog/tags/third/</link>
+      <pubDate>Fri, 20 Mar 2020 21:19:29 +0900</pubDate>
+      
+      <guid>https://stomoya.github.io/blog/tags/third/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>first</title>
+      <link>https://stomoya.github.io/blog/tags/first/</link>
+      <pubDate>Fri, 20 Mar 2020 21:17:53 +0900</pubDate>
+      
+      <guid>https://stomoya.github.io/blog/tags/first/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

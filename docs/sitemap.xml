@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/categories/</loc>
+    <lastmod>2020-03-20T21:19:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/posts/</loc>
+    <lastmod>2020-03-20T21:19:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/tags/second/</loc>
+    <lastmod>2020-03-20T21:19:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/categories/second/</loc>
+    <lastmod>2020-03-20T21:19:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/posts/second-post/</loc>
+    <lastmod>2020-03-20T21:19:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/tags/</loc>
+    <lastmod>2020-03-20T21:19:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/tags/third/</loc>
+    <lastmod>2020-03-20T21:19:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/categories/third/</loc>
+    <lastmod>2020-03-20T21:19:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/tags/first/</loc>
+    <lastmod>2020-03-20T21:17:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/categories/first/</loc>
+    <lastmod>2020-03-20T21:17:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/posts/first-post/</loc>
+    <lastmod>2020-03-20T21:17:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/about/</loc>
+    <lastmod>2020-03-20T19:04:52+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stomoya.github.io/blog/</loc>
+    <lastmod>2020-03-20T19:04:52+09:00</lastmod>
+  </url>
+  
+</urlset>
