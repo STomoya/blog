@@ -6,8 +6,13 @@ layout: "about"
 
 # ABOUT
 
+This blog is for jotting down things that happened, but not that significant to be on the profile page.
 
-## About the site
+## About me
+
+[stomoya.github.io](https://stomoya.github.io/)
+
+## About the blog
 
 I am using hugo to generate this site.  
-Also, I am using the github-style theme.
+Also, I am using the [github-style](https://github.com/MeiK2333/github-style/) theme.

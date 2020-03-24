@@ -13,21 +13,12 @@
     
     
     <item>
-      <title>Second Post</title>
-      <link>https://stomoya.github.io/blog/posts/second-post/</link>
-      <pubDate>Fri, 20 Mar 2020 21:19:29 +0900</pubDate>
+      <title>My First Post</title>
+      <link>https://stomoya.github.io/blog/posts/my-first-post/</link>
+      <pubDate>Mon, 23 Mar 2020 12:37:44 +0900</pubDate>
       
-      <guid>https://stomoya.github.io/blog/posts/second-post/</guid>
-      <description>Second Sample Summary</description>
-    </item>
-    
-    <item>
-      <title>First Post</title>
-      <link>https://stomoya.github.io/blog/posts/first-post/</link>
-      <pubDate>Fri, 20 Mar 2020 21:17:53 +0900</pubDate>
-      
-      <guid>https://stomoya.github.io/blog/posts/first-post/</guid>
-      <description>Sample Summary</description>
+      <guid>https://stomoya.github.io/blog/posts/my-first-post/</guid>
+      <description>My first post ever</description>
     </item>
     
     <item>
@@ -36,7 +27,9 @@
       <pubDate>Fri, 20 Mar 2020 19:04:52 +0900</pubDate>
       
       <guid>https://stomoya.github.io/blog/about/</guid>
-      <description>ABOUT About the site I am using hugo to generate this site.
+      <description>ABOUT This blog is for jotting down things that happened, but not that significant to be on the profile page.
+About me stomoya.github.io
+About the blog I am using hugo to generate this site.
 Also, I am using the github-style theme.</description>
     </item>
     

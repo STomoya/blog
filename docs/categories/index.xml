@@ -7,35 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020. STomoya All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 20 Mar 2020 21:19:29 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 12:37:44 +0900</lastBuildDate>
     
 	<atom:link href="https://stomoya.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>second</title>
-      <link>https://stomoya.github.io/blog/categories/second/</link>
-      <pubDate>Fri, 20 Mar 2020 21:19:29 +0900</pubDate>
+      <title>Programming</title>
+      <link>https://stomoya.github.io/blog/categories/programming/</link>
+      <pubDate>Mon, 23 Mar 2020 12:37:44 +0900</pubDate>
       
-      <guid>https://stomoya.github.io/blog/categories/second/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>third</title>
-      <link>https://stomoya.github.io/blog/categories/third/</link>
-      <pubDate>Fri, 20 Mar 2020 21:19:29 +0900</pubDate>
-      
-      <guid>https://stomoya.github.io/blog/categories/third/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>first</title>
-      <link>https://stomoya.github.io/blog/categories/first/</link>
-      <pubDate>Fri, 20 Mar 2020 21:17:53 +0900</pubDate>
-      
-      <guid>https://stomoya.github.io/blog/categories/first/</guid>
+      <guid>https://stomoya.github.io/blog/categories/programming/</guid>
       <description></description>
     </item>
     
