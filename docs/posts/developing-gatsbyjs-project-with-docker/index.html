@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://stomoya.github.io/blog/css/github.css" />
     <meta name="viewport" content="width=device-width">
 
-    <title>First Post - STomoya</title>
+    <title>Developing GatsbyJS Project with Docker - STomoya</title>
 
     <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://stomoya.github.io/blog/images/favicon.ico">
     <meta name="theme-color" content="#1e2327">
@@ -87,16 +87,16 @@
                                     href="https://stomoya.github.io/blog/">STomoya</a></span>
                             <span class="path-divider">/</span>
                             <strong itemprop="name" class="css-truncate-target" style="max-width: 410px"><a
-                                    href="https://stomoya.github.io/blog/posts/first-post/">First Post</a></strong>
+                                    href="https://stomoya.github.io/blog/posts/developing-gatsbyjs-project-with-docker/">Developing GatsbyJS Project with Docker</a></strong>
 
                             <div class="d-block text-small text-gray">
-                                Created <time-ago datetime="2020-03-20" class="no-wrap"
-                                    title="Created at 2020/03/20">
-                                    2020-03-20</time-ago>
+                                Created <time-ago datetime="2020-03-28" class="no-wrap"
+                                    title="Created at 2020/03/28">
+                                    2020-03-28</time-ago>
                                 <span class="file-info-divider"></span>
-                                Modifyed <time-ago datetime="2020-03-20" class="no-wrap"
-                                    title="Modified  at 2020/03/20">
-                                    2020-03-20</time-ago>
+                                Modifyed <time-ago datetime="2020-03-28" class="no-wrap"
+                                    title="Modified  at 2020/03/28">
+                                    2020-03-28</time-ago>
                             </div>
                         </h1>
                     </div>
@@ -111,14 +111,97 @@
                     <div class="Box mt-3 position-relative">
                         <div class="Box-header py-2 d-flex flex-column flex-shrink-0 flex-md-row flex-md-items-center">
                             <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
-                                6 Words
+                                609 Words
                                 
                             </div>
                         </div>
 
                         <div id="readme" class="Box-body readme blob instapaper_body js-code-block-container">
-                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="first">First</h1>
-<p>This is my first post.</p>
+                            <article class="markdown-body entry-content p-3 p-md-6" itemprop="text"><h1 id="developing-gatsbyjs-project-with-docker">Developing GatsbyJS Project with Docker</h1>
+<p>I started to play around with GatsbyJS so I&rsquo;ll write down some of the things I learned when developing projects with docker.<br>
+The <a href="https://github.com/STomoya/gatsby-playground">repository is here</a>.</p>
+<h2 id="initualization">Initualization</h2>
+<p>In GatsbyJS, there are ways that makes it simple to creat a project.
+Follow the <a href="https://www.gatsbyjs.org/docs/">official tutorial</a> for making a project.
+I used <code>https://github.com/gatsbyjs/gatsby-starter-hello-world</code> for initualizing my project.</p>
+<p>Then I erased the created <code>node-modules</code> folder because I will do the development on a docker container.
+<code>node-modules</code> folder is <em>very</em> heavy so if you aren&rsquo;t using it, you should erase it&hellip;</p>
+<h2 id="docker">Docker</h2>
+<p>Next I started creating a Docker container which lets me develop my website.<br>
+<a href="https://yopinoji.com/docker-for-gatsby-js">This</a> is the site I referenced. (Its Japanese. Sorry&hellip;)</p>
+<p>I created a <code>./docker/Dockerfile</code> and <code>docker-compose.yml</code> inside the project folder.</p>
+<p>In my <code>Dockerfile</code>:</p>
+<pre><code>FROM node:13-alpine
+
+RUN apk add --no-cache python make g++ &amp;&amp; \
+    apk add vips-dev fftw-dev --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community --repository http://dl-3.alpinelinux.org/alpine/edge/main &amp;&amp; \
+    rm -fR /var/cache/apk/*
+
+WORKDIR /usr/src
+
+COPY ./package.json package.json
+
+RUN npm install
+
+EXPOSE 8000
+</code></pre><p>The base image I am using is <code>node:13-alpine</code>.
+If you use the alpine linux, you need to install vips-dev.
+So the first <code>RUN</code> is for installing dependencies.
+Then, after changing the working directory I copy the package.json and install the dependencies of the website by <code>npm install</code>.
+Finally, expose the <code>8000</code> port, which is the default port for the development server of GatsbyJS.
+If you set your development server port to something else, you should expose the specific port.</p>
+<p><em>You should expose the port in the <code>Dockerfile</code> and not in the <code>docker-compose.yml</code> file. It will not work.</em></p>
+<p>Then in my <code>docker-compose.yml</code>:</p>
+<pre><code>version: '3'
+
+volumes:
+    node_modules:
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - &quot;8000:8000&quot;
+    volumes:
+      - node_modules:/usr/src/node_modules
+      - .:/usr/src
+    environment:
+      - NODE_ENV=development
+    command: npm run develop
+</code></pre><p>The service <code>web</code> is the main part.
+I put the Dockerfile in a folder call <code>docker</code>, so I declared that in the <code>build</code>.
+The <code>8000</code> port is forward to the container&rsquo;s <code>8000</code> port.
+Then the volumes current folder is binded to the container&rsquo;s <code>/usr/src</code> folder.
+Next I have the <code>enviornment</code> for the NodeJS.
+And the command to run the development server.</p>
+<p>I didn&rsquo;t need the <code>node_modules</code> to be in my local folder so I did things to exclude this folder, which is the <code>volumes</code> on the top and first line of the <code>volumes</code> in the <code>web</code>.
+This is not necessary if you don&rsquo;t care much about having heavy folders on your local folders.</p>
+<p>So, now you can run</p>
+<pre><code class="language-console" data-lang="console">$ docker-compose build
+</code></pre><p>to build the container, and</p>
+<pre><code class="language-console" data-lang="console">$ docker-compose up
+</code></pre><p>to start the development server.<br>
+Visit <code>localhost:8000</code> to see it running.</p>
+<p>To add dependencies, run</p>
+<pre><code class="language-console" data-lang="console">$ docker-compose run --rm npm install &lt;package&gt;
+</code></pre><p>And to build, run</p>
+<pre><code class="language-console" data-lang="console">$ docker-compose run --rm npm run build
+</code></pre><p>and the files will be built inside the <code>public</code> folder.</p>
+<h2 id="development">Development</h2>
+<p>In GatsbyJS, the changes you made to your files are detected automatically and they will run the build again to update the contents.
+In order to find the changes, the development server keeps on running unless you hit <code>Ctrl+C</code> to stop the development server.</p>
+<p>Also, you don&rsquo;t need to care about the server stopping when you have a bug in your program.
+It wont stop even if you have a bug that makes your site unable to move.
+It even shows the error message on the browser!
+Wonderful:)</p>
+<p>I recognized that there are several tasks in the build process, and they automatically detect where to build from by the changes that were made.
+Inteligent:)</p>
+<p>For the actual coding, see the <a href="https://www.gatsbyjs.org/docs/">official tutorial</a>.</p>
+<h2 id="overall">Overall</h2>
+<p>Thats it.<br>
+I might write about the GatsbyJS itself, but many articles are on the Internet so it&rsquo;s better looking at those pages.</p>
 </article>
                         </div>
                     </div>

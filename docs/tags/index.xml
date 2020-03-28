@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020. STomoya All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 23 Mar 2020 12:37:44 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2020 14:35:17 +0900</lastBuildDate>
     
 	<atom:link href="https://stomoya.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>docker</title>
+      <link>https://stomoya.github.io/blog/tags/docker/</link>
+      <pubDate>Sat, 28 Mar 2020 14:35:17 +0900</pubDate>
+      
+      <guid>https://stomoya.github.io/blog/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker-compose</title>
+      <link>https://stomoya.github.io/blog/tags/docker-compose/</link>
+      <pubDate>Sat, 28 Mar 2020 14:35:17 +0900</pubDate>
+      
+      <guid>https://stomoya.github.io/blog/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GatsbyJS</title>
+      <link>https://stomoya.github.io/blog/tags/gatsbyjs/</link>
+      <pubDate>Sat, 28 Mar 2020 14:35:17 +0900</pubDate>
+      
+      <guid>https://stomoya.github.io/blog/tags/gatsbyjs/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>blog</title>
